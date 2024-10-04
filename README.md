@@ -66,11 +66,20 @@ docker compose --profile <nombre_contenedor_elegido> up
 ```
 Una vez lanzado, la terminal se mantendrá ejecutando el contenedor hasta que se pare. Para pararlo basta con enviar una señal de terminación `ctrl`+`c`.
 
+Es posible y recomendable gestionar el lanzamiento y parada de los contenedores desde la extensión remote de VSCode. Para gestionar la parada y lanzamiento de los contenedores ya creados desde VSCode:
+<p align="center">
+    <img src="pictures/encender_contenedor.gif" alt="lanzar">
+</p>
+
 ### 4. Acceso al contenedor
 Es posible acceder al contenedor creado de varias maneras:
 - Si el contenedor utilizado es el `desktop`, desde cualquier navegador se puede acceder a él en [esta dirección](http://localhost:6081). **La contraseña es laboratorio**. En esta dirección se sirve un escritorio funcional completo.
 - Para todos los contenedores se recomienda asociar una instancia de VSCode al contenedor utilizando la extension "remote explorer". Esto permite desarrollar en VSCode como si se trabajara en local, pero ejecutando todo en el contenedor.
 
+Incluso si se utiliza el contenedor `desktop` se recomienda desarrollar y lanzar todo desde VSCode y utilizar el escritorio para ver la salida gráfica del sistema. Para conectarse al contenedor desde VSCode:
+<p align="center">
+    <img src="pictures/conectarse_contenedor_vscode.gif" alt="Conectarse">
+</p>
 ### 5. Primeros pasos en ROS
 Dentro de los contenedores se incluye un espacio de trabajo de ROS con todos los elementos necesarios para poder trabajar con los robots del laboratorio.
 
