@@ -96,9 +96,9 @@ cd /home/laboratorio/ros_workspace
 ```bash
 sudo apt update
 ```
-5. Inicializar y actualizar el gestor de paquetes de ROS:
+5. Actualizar el gestor de paquetes de ROS:
 ```bash
-rosdep init && rosdep update
+rosdep update
 ```
 6. Instalar todas las dependencias del espacio de trabajo base:
 ```bash
