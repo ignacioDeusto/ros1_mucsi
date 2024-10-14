@@ -65,7 +65,8 @@ RUN dpkg --add-architecture i386 && \
         xinit \
         xfonts-base \
         libxrandr-dev \
-        xvfb
+        xvfb \ 
+        ros-noetic-joint-state-publisher
 
 ENV XDG_CURRENT_DESKTOP=KDE
 ENV KWIN_COMPOSE=N
