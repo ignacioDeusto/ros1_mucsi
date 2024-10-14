@@ -39,7 +39,7 @@ services:
     volumes:
       - ./ros_workspace:/home/laboratorio/ros_workspace
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - $XAUTHORITY:/root/.Xauthority
+      - ${XAUTHORITY:-0}:/root/.Xauthority
       - /dev:/dev
     tmpfs:
       - /dev/shm:rw
@@ -68,7 +68,7 @@ services:
     volumes:
       - ./ros_workspace:/home/laboratorio/ros_workspace
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - $XAUTHORITY:/root/.Xauthority
+      - ${XAUTHORITY:-0}:/root/.Xauthority
       - /dev:/dev
     tmpfs:
       - /dev/shm:rw
