@@ -72,3 +72,5 @@ services:
       - /dev:/dev
     tmpfs:
       - /dev/shm:rw
+    environment:
+      - DISPLAY=$DISPLAY
