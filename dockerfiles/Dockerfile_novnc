@@ -17,7 +17,7 @@ ENV ENABLE_BASIC_AUTH=true
 ARG NOVNC_VERSION=1.3.0
 
 RUN apt-get clean && \
-    apt-get update && apt-get install --no-install-recommends -y locales ros-noetic-joint-state-publisher && \
+    apt-get update && apt-get install --no-install-recommends -y locales &&\
     rm -rf /var/lib/apt/lists/* && \
     locale-gen en_US.UTF-8
 ENV LANG=en_US.UTF-8
@@ -120,18 +120,14 @@ RUN apt update && apt install -y rviz \
          nmap \
          xauth \
          ros-noetic-robot-state-publisher \
+         ros-noetic-joint-state-publisher \
          git \
          ros-noetic-usb-cam \
          htop \
          libxmlrpc-core-c3-dev
 
-RUN pip install gym==0.21 \
-                stable-baselines3 \
-                numpy \
-                catkin_tools \
-                pybullet \
-                tensorboard \
-                pybullet_planning
+RUN pip install catkin_tools \
+                tensorboard
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
                 sudo && \
