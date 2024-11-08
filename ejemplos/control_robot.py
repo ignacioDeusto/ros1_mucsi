@@ -10,6 +10,8 @@ from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
 from typing import List
 from geometry_msgs.msg import Pose, PoseStamped
+from control_msgs.msg import GripperCommandAction, GripperCommandGoal, GripperCommandResult
+from actionlib import SimpleActionClient
 
 class ControlRobot:
     def __init__(self) -> None:
@@ -19,6 +21,7 @@ class ControlRobot:
         self.scene = PlanningSceneInterface()
         self.group_name = "robot"
         self.move_group = MoveGroupCommander(self.group_name)
+        self.gripper_action_client = SimpleActionClient("rg2_action_server", GripperCommandAction)
         self.add_floor()
 
     def get_motor_angles(self) -> list:
@@ -51,15 +54,24 @@ class ControlRobot:
         
         return self.move_group.execute(plan, wait=wait)
 
-
-
     def add_floor(self) -> None:
         pose_suelo = Pose()
         pose_suelo.position.z = -0.026
         self.add_box_to_planning_scene(pose_suelo,"suelo",(2,2,.05))
+        
+    def mover_pinza(self, anchura_dedos: float, fuerza: float) -> bool:
+        goal = GripperCommandGoal()
+        goal.command.position = anchura_dedos
+        goal.command.max_effort = fuerza
+        self.gripper_action_client.send_goal(goal)
+        self.gripper_action_client.wait_for_result()
+        result = self.gripper_action_client.get_result()
+        
+        return result.reached_goal
 
 if __name__ == '__main__':
     control = ControlRobot()
+    control.mover_pinza(100,10)
     pose_act = control.get_pose()
     pose_act.position.z -= 0.1
     control.move_to_pose(pose_act)
