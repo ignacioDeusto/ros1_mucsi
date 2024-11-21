@@ -37,6 +37,8 @@ Las medidas registradas en influxDB deberán tener asociados, además del timest
     
     Una vez desarrollado el nodo, planificar y ejecutar 6 trayectorias (3 correctas y 3 con colisión/fallo durante la ejecución) asociadas a soldadura de solape. Para esto, planificar una trayectoria en la que el efector final del robot se mueva de manera lineal a través de varias poses predefinidas.
 
+    ![Dibujo de trayectorias de soldadura](/pictures/dibujo_trajs_soldadura.png)
+
     Comprobar el correcto funcionamiento del nodo registrando los datos de las 6 trayectorias en la base de datos y visualizarlas en grafana.
 
 3. **Documentación de la aplicación**:
