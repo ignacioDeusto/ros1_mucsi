@@ -35,7 +35,7 @@ Las medidas registradas en influxDB deberán tener asociados, además del timest
 
 2. **Ejecución de trayectorias asociadas a soldadura de solape**:
     
-    Una vez desarrollado el nodo, planificar y ejecutar 6 trayectorias asociadas a soldadura de solape. Para esto, planificar una trayectoria en la que el efector final del robot se mueva de manera lineal a través de varias poses predefinidas.
+    Una vez desarrollado el nodo, planificar y ejecutar 6 trayectorias (3 correctas y 3 con colisión/fallo durante la ejecución) asociadas a soldadura de solape. Para esto, planificar una trayectoria en la que el efector final del robot se mueva de manera lineal a través de varias poses predefinidas.
 
     Comprobar el correcto funcionamiento del nodo registrando los datos de las 6 trayectorias en la base de datos y visualizarlas en grafana.
 
@@ -57,3 +57,6 @@ Se evaluará:
 - La correcta organización e integración del nodo en el entorno de trabajo.
 - La claridad de la documentación y la calidad tanto del nodo como de las trayectorias desarrolladas.
 - El correcto formato y visualización de los datos.
+
+## Opcional
+Opcionalmente, se podrán programar estadísticas y alertas en Grafana que muestren diferencias de comportamiento en las trayectorias simuladas.
