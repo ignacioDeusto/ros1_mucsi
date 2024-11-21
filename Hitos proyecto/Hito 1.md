@@ -15,4 +15,9 @@ El objetivo de este hito es garantizar que se cuenta con un entorno de trabajo b
      - **Comunicación entre Nodos**: Describir cómo se van a comunicar los nodos, especificando si la comunicación será sincróna o asincróna. Es necesario identificar los canales de comunicación ROS, tales como `topics`, `services` o `actions`, así como los tipos de mensajes utilizados.
      - **Tipos de Datos**: Definir los tipos de datos que serán intercambiados entre nodos. Se espera que los estudiantes definan los mensajes relevantes, incluyendo los campos necesarios para la correcta transmisión de información (por ejemplo, posiciones, velocidades, señales de sensores, etc.).
 
-La entrega del primer hito se integrará en un repositorio de git hosteado en GitHub y debe incluir el workspace estructurado, las imágenes de Docker preparadas, y la documentación correspondiente. Se evaluará la correcta organización del entorno de trabajo, la claridad de la documentación y la capacidad de los estudiantes para configurar un sistema distribuido en ROS de manera efectiva.
+## Entrega
+La entrega del primer hito se integrará en un repositorio de git hosteado en GitHub y debe incluir el workspace estructurado, las imágenes de Docker preparadas, y la documentación correspondiente. 
+
+La entrega se realizará en el curso ALUD.
+## Entrega
+Se evaluará la correcta organización del entorno de trabajo, la claridad de la documentación y la capacidad de los estudiantes para configurar un sistema distribuido en ROS de manera efectiva.
